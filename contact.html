@@ -1,277 +1,338 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Oprix Labs</title>
-    <meta name="description"
-        content="Get in touch with Oprix Labs to discuss your next project or partnership opportunity.">
+    <meta
+      name="description"
+      content="Get in touch with Oprix Labs to discuss your next project or partnership opportunity."
+    />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--color-text-light);
-            font-weight: 500;
-        }
-
-        input,
-        textarea,
-        select {
-            width: 100%;
-            padding: 0.75rem;
-            background-color: var(--color-secondary);
-            border: 1px solid transparent;
-            border-radius: 4px;
-            color: var(--color-white);
-            font-family: var(--font-main);
-            font-size: 1rem;
-            transition: var(--transition-fast);
-        }
-
-        input:focus,
-        textarea:focus,
-        select:focus {
-            outline: none;
-            border-color: var(--color-accent);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .contact-info {
-            background-color: var(--color-secondary);
-            padding: 2rem;
-            border-radius: 4px;
-        }
-
-        .contact-item {
-            margin-bottom: 2rem;
-        }
-
-        .contact-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--color-accent);
-        }
-
-        .error {
-            border-color: #f5576c !important;
-        }
-
-        .error-message {
-            color: #f5576c;
-            font-size: 0.85rem;
-            margin-top: 0.25rem;
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body
+    class="bg-[#020c1b] text-[#8892b0] font-['Inter',system-ui,-apple-system,sans-serif] antialiased leading-relaxed"
+  >
     <!-- Header -->
-    <header class="header">
-        <div class="container nav">
-            <a href="index.html" class="logo">OPRIX LABS</a>
-            <button class="mobile-menu-btn" aria-label="Toggle navigation">
-                ☰
-            </button>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="process.html" class="nav-link">Process</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="contact.html" class="nav-link btn btn-primary active">Contact</a>
-            </nav>
-        </div>
+    <header
+      class="fixed top-0 w-full z-50 bg-[rgba(10,25,47,0.95)] backdrop-blur-[10px] shadow-sm py-4 transition-all duration-300"
+    >
+      <div
+        class="max-w-[1200px] mx-auto px-8 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-2xl font-bold text-[#64ffda] tracking-wider no-underline"
+          >OPRIX LABS</a
+        >
+        <button
+          class="md:hidden text-[#64ffda] text-2xl cursor-pointer bg-transparent border-none"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+        <nav class="hidden md:flex gap-8">
+          <a
+            href="index.html"
+            class="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
+            >Services</a
+          >
+          <a
+            href="process.html"
+            class="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
+            >Process</a
+          >
+          <a
+            href="portfolio.html"
+            class="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
+            >Portfolio</a
+          >
+          <a
+            href="blog.html"
+            class="text-[#ccd6f6] text-sm font-medium no-underline hover:text-[#64ffda] transition-colors duration-200"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="text-[#64ffda] inline-block px-6 py-3 border-2 border-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
+            >Contact</a
+          >
+        </nav>
+      </div>
     </header>
 
     <!-- Page Header -->
-    <section class="section" style="padding-top: 120px; padding-bottom: 40px;">
-        <div class="container text-center">
-            <h1 class="hero-title" style="font-size: 3rem;">Let's Build Together</h1>
-            <p class="hero-description" style="margin: 0 auto;">
-                Have a project in mind? We'd love to hear about it.
-            </p>
-        </div>
+    <section class="py-16 bg-[#020c1b] pt-[120px] pb-10">
+      <div class="max-w-[1200px] mx-auto px-8 text-center">
+        <h1 class="text-[3rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+          Let's Build Together
+        </h1>
+        <p class="text-xl leading-relaxed max-w-[600px] mx-auto text-[#8892b0]">
+          Have a project in mind? We'd love to hear about it.
+        </p>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section">
-        <div class="container">
-            <div class="contact-wrapper">
+    <section class="py-16 bg-[#020c1b]">
+      <div class="max-w-[1200px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
+          <!-- Contact Form -->
+          <div>
+            <h2
+              class="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-8"
+            >
+              Send us a message
+            </h2>
+            <form id="contactForm">
+              <div class="mb-6">
+                <label for="name" class="block mb-2 text-[#ccd6f6] font-medium">
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-3 py-3 bg-[#112240] border border-transparent rounded text-[#e6f1ff] font-['Inter',system-ui,-apple-system,sans-serif] text-base transition-all duration-200 focus:outline-none focus:border-[#64ffda]"
+                />
+                <p class="text-[#f5576c] text-sm mt-1 hidden" id="nameError">
+                  Please enter your name
+                </p>
+              </div>
 
-                <!-- Contact Form -->
-                <div>
-                    <h2 class="section-title mb-2">Send us a message</h2>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                            <p class="error-message" id="nameError">Please enter your name</p>
-                        </div>
+              <div class="mb-6">
+                <label
+                  for="email"
+                  class="block mb-2 text-[#ccd6f6] font-medium"
+                >
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-3 py-3 bg-[#112240] border border-transparent rounded text-[#e6f1ff] font-['Inter',system-ui,-apple-system,sans-serif] text-base transition-all duration-200 focus:outline-none focus:border-[#64ffda]"
+                />
+                <p class="text-[#f5576c] text-sm mt-1 hidden" id="emailError">
+                  Please enter a valid email
+                </p>
+              </div>
 
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                            <p class="error-message" id="emailError">Please enter a valid email</p>
-                        </div>
+              <div class="mb-6">
+                <label
+                  for="company"
+                  class="block mb-2 text-[#ccd6f6] font-medium"
+                >
+                  Company / Organization
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="w-full px-3 py-3 bg-[#112240] border border-transparent rounded text-[#e6f1ff] font-['Inter',system-ui,-apple-system,sans-serif] text-base transition-all duration-200 focus:outline-none focus:border-[#64ffda]"
+                />
+              </div>
 
-                        <div class="form-group">
-                            <label for="company">Company / Organization</label>
-                            <input type="text" id="company" name="company">
-                        </div>
+              <div class="mb-6">
+                <label
+                  for="service"
+                  class="block mb-2 text-[#ccd6f6] font-medium"
+                >
+                  Service Interest
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-3 py-3 bg-[#112240] border border-transparent rounded text-[#e6f1ff] font-['Inter',system-ui,-apple-system,sans-serif] text-base transition-all duration-200 focus:outline-none focus:border-[#64ffda]"
+                >
+                  <option value="">Select a service</option>
+                  <option value="web">Web Development</option>
+                  <option value="mobile">Mobile App Development</option>
+                  <option value="cloud">Cloud Solutions</option>
+                  <option value="consulting">Technical Consulting</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
 
-                        <div class="form-group">
-                            <label for="service">Service Interest</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                <option value="web">Web Development</option>
-                                <option value="mobile">Mobile App Development</option>
-                                <option value="cloud">Cloud Solutions</option>
-                                <option value="consulting">Technical Consulting</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block mb-2 text-[#ccd6f6] font-medium"
+                >
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  class="w-full px-3 py-3 bg-[#112240] border border-transparent rounded text-[#e6f1ff] font-['Inter',system-ui,-apple-system,sans-serif] text-base transition-all duration-200 focus:outline-none focus:border-[#64ffda] resize-y min-h-[150px]"
+                ></textarea>
+                <p class="text-[#f5576c] text-sm mt-1 hidden" id="messageError">
+                  Please enter a message
+                </p>
+              </div>
 
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" required></textarea>
-                            <p class="error-message" id="messageError">Please enter a message</p>
-                        </div>
+              <button
+                type="submit"
+                class="w-full inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
 
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
+          <!-- Contact Info -->
+          <div>
+            <h2
+              class="text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-8"
+            >
+              Get in touch
+            </h2>
+            <div class="bg-[#112240] p-8 rounded">
+              <div class="mb-8">
+                <h3 class="text-xl mb-2 text-[#64ffda]">Email</h3>
+                <p class="text-[#8892b0]">hello@oprixlabs.com</p>
+              </div>
+
+              <div class="mb-8">
+                <h3 class="text-xl mb-2 text-[#64ffda]">Business Hours</h3>
+                <p class="text-[#8892b0]">
+                  Monday - Friday: 9:00 AM - 6:00 PM EST<br />
+                  Saturday - Sunday: Closed
+                </p>
+              </div>
+
+              <div class="mb-8">
+                <h3 class="text-xl mb-2 text-[#64ffda]">Follow Us</h3>
+                <div class="flex gap-4 mt-4">
+                  <a
+                    href="#"
+                    class="text-[#8892b0] text-2xl no-underline hover:text-[#64ffda] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                    >GitHub</a
+                  >
+                  <a
+                    href="#"
+                    class="text-[#8892b0] text-2xl no-underline hover:text-[#64ffda] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                    >LinkedIn</a
+                  >
+                  <a
+                    href="#"
+                    class="text-[#8892b0] text-2xl no-underline hover:text-[#64ffda] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                    >Twitter</a
+                  >
                 </div>
+              </div>
 
-                <!-- Contact Info -->
-                <div>
-                    <h2 class="section-title mb-2">Get in touch</h2>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <h3>Email</h3>
-                            <p>hello@oprixlabs.com</p>
-                        </div>
-
-                        <div class="contact-item">
-                            <h3>Business Hours</h3>
-                            <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>
-                                Saturday - Sunday: Closed</p>
-                        </div>
-
-                        <div class="contact-item">
-                            <h3>Follow Us</h3>
-                            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                                <a href="#" class="social-link">GitHub</a>
-                                <a href="#" class="social-link">LinkedIn</a>
-                                <a href="#" class="social-link">Twitter</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <h3>Response Time</h3>
-                            <p>We typically respond within 24 hours during business days.</p>
-                        </div>
-                    </div>
-                </div>
-
+              <div>
+                <h3 class="text-xl mb-2 text-[#64ffda]">Response Time</h3>
+                <p class="text-[#8892b0]">
+                  We typically respond within 24 hours during business days.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="social-links">
-                <a href="#" class="social-link">GitHub</a>
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">Twitter</a>
-            </div>
-            <p class="copyright">
-                &copy; 2026 Oprix Labs. All rights reserved.
-            </p>
+    <footer class="bg-[#112240] py-16 text-center mt-auto">
+      <div class="max-w-[1200px] mx-auto px-8">
+        <div class="flex justify-center gap-8 mb-4">
+          <a
+            href="#"
+            class="text-[#8892b0] text-2xl no-underline hover:text-[#64ffda] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+            >GitHub</a
+          >
+          <a
+            href="#"
+            class="text-[#8892b0] text-2xl no-underline hover:text-[#64ffda] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+            >LinkedIn</a
+          >
+          <a
+            href="#"
+            class="text-[#8892b0] text-2xl no-underline hover:text-[#64ffda] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+            >Twitter</a
+          >
         </div>
+        <p class="text-[#8892b0] font-['Fira Code',monospace] text-sm">
+          &copy; 2026 Oprix Labs. All rights reserved.
+        </p>
+      </div>
     </footer>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script>
-        // Contact Form Validation
-        const form = document.getElementById('contactForm');
+      // Contact Form Validation
+      const form = document.getElementById("contactForm");
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-            // Reset errors
-            document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
-            document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
-
-            let isValid = true;
-
-            // Validate Name
-            const name = document.getElementById('name');
-            if (name.value.trim() === '') {
-                name.classList.add('error');
-                document.getElementById('nameError').style.display = 'block';
-                isValid = false;
-            }
-
-            // Validate Email
-            const email = document.getElementById('email');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email.value.trim())) {
-                email.classList.add('error');
-                document.getElementById('emailError').style.display = 'block';
-                isValid = false;
-            }
-
-            // Validate Message
-            const message = document.getElementById('message');
-            if (message.value.trim() === '') {
-                message.classList.add('error');
-                document.getElementById('messageError').style.display = 'block';
-                isValid = false;
-            }
-
-            if (isValid) {
-                // Form is valid - in production, you would submit to a backend
-                alert('Thank you for your message! We will get back to you soon.');
-                form.reset();
-            }
+        // Reset errors
+        document.querySelectorAll("input, textarea, select").forEach((el) => {
+          el.classList.remove("border-[#f5576c]");
         });
-    </script>
-</body>
+        document.querySelectorAll('[id$="Error"]').forEach((el) => {
+          el.classList.add("hidden");
+        });
 
+        let isValid = true;
+
+        // Validate Name
+        const name = document.getElementById("name");
+        if (name.value.trim() === "") {
+          name.classList.add("border-[#f5576c]");
+          document.getElementById("nameError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        // Validate Email
+        const email = document.getElementById("email");
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value.trim())) {
+          email.classList.add("border-[#f5576c]");
+          document.getElementById("emailError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        // Validate Message
+        const message = document.getElementById("message");
+        if (message.value.trim() === "") {
+          message.classList.add("border-[#f5576c]");
+          document.getElementById("messageError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        if (isValid) {
+          // Form is valid - in production, you would submit to a backend
+          alert("Thank you for your message! We will get back to you soon.");
+          form.reset();
+        }
+      });
+    </script>
+  </body>
 </html>
