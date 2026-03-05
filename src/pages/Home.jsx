@@ -1,11 +1,77 @@
 import { Link } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import webIcon from '../assets/images/web-icon.png';
 import mobileIcon from '../assets/images/mobile-icon.png';
 import cloudIcon from '../assets/images/cloud-icon.png';
 
+// smooth scroll hook for anchor links
+function useSmoothScroll() {
+  useEffect(() => {
+    const handler = (e) => {
+      e.preventDefault();
+      const targetId = e.currentTarget.getAttribute('href');
+      if (targetId === '#') return;
+      const targetElem = document.querySelector(targetId);
+      if (targetElem) {
+        targetElem.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    anchors.forEach((a) => a.addEventListener('click', handler));
+    return () => anchors.forEach((a) => a.removeEventListener('click', handler));
+  }, []);
+}
+
+// service card with hover counter animation
+function ServiceCard({ icon, alt, title, description, target = 120 }) {
+  const [count, setCount] = useState(0);
+  const hasAnimated = useRef(false);
+
+  const handleMouseEnter = () => {
+    if (hasAnimated.current) return;
+    hasAnimated.current = true;
+    const increment = target / 100;
+    let current = 0;
+    const update = () => {
+      current += increment;
+      if (current < target) {
+        setCount(Math.ceil(current));
+        requestAnimationFrame(update);
+      } else {
+        setCount(target);
+      }
+    };
+    update();
+  };
+
+  return (
+    <div
+      className="card group relative overflow-hidden bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer"
+      onMouseEnter={handleMouseEnter}
+    >
+      <div className="card-icon flex w-[100px] mb-0">
+        <img src={icon} alt={alt || title} className="max-w-full h-auto" />
+        <div className="count opacity-0 group-hover:opacity-100 font-bold text-lg text-center flex justify-start items-center gap-2 whitespace-nowrap relative z-10 transition-opacity duration-500 cursor-pointer">
+          <h2>+</h2>
+          <h2 className="counter">{count}</h2>
+          <p>Projects Completed</p>
+        </div>
+      </div>
+      <div className="info relative z-10 p-5">
+        <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+          {title}
+        </h3>
+        <p className="text-[#8892b0] mb-4">{description}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
+  useSmoothScroll();
+
   return (
     <>
       <Header />
@@ -45,67 +111,24 @@ export default function Home() {
               What We Do
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-              {/* Service 1 */}
-              <div className="card backs group relative overflow-hidden bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
-                <div className="card-icon flex w-[100px] mb-0">
-                  <img src={webIcon} alt="Web Development" className="max-w-full h-auto" />
-                  <div className="count opacity-0 group-hover:opacity-100 font-bold text-lg text-center flex justify-start items-center gap-2 whitespace-nowrap relative z-10 transition-opacity duration-500 cursor-pointer">
-                    <h2>+</h2>
-                    <h2 className="counter">120</h2>
-                    <p>Projects Completed</p>
-                  </div>
-                </div>
-                <div className="info relative z-10 p-5">
-                  <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                    Web Development
-                  </h3>
-                  <p className="text-[#8892b0] mb-4">
-                    Custom, responsive websites and web applications built with
-                    modern frameworks and best practices for speed and scalability.
-                  </p>
-                </div>
-              </div>
-              {/* Service 2 */}
-              <div className="card mobile group relative overflow-hidden bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
-                <div className="card-icon flex w-[100px] mb-0">
-                  <img src={mobileIcon} alt="Mobile Apps" className="max-w-full h-auto" />
-                  <div className="count opacity-0 group-hover:opacity-100 font-bold text-lg text-center flex justify-start items-center gap-2 whitespace-nowrap relative z-10 transition-opacity duration-500 cursor-pointer">
-                    <h2>+</h2>
-                    <h2 className="counter">120</h2>
-                    <p>Projects Completed</p>
-                  </div>
-                </div>
-                <div className="info relative z-10 p-5">
-                  <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                    Mobile Apps
-                  </h3>
-                  <p className="text-[#8892b0] mb-4">
-                    Native and cross-platform mobile applications that provide
-                    seamless user experiences on iOS and Android devices.
-                  </p>
-                </div>
-              </div>
-              {/* Service 3 */}
-              <div className="card cloud group relative overflow-hidden bg-[#112240] rounded-[15px] p-8 shadow-md hover:shadow-lg hover:-translate-y-[5px] transition-all duration-300 cursor-pointer">
-                <div className="card-icon flex w-[100px] mb-0">
-                  <img src={cloudIcon} alt="Cloud Solutions" className="max-w-full h-auto" />
-                  <div className="count opacity-0 group-hover:opacity-100 font-bold text-lg text-center flex justify-start items-center gap-2 whitespace-nowrap relative z-10 transition-opacity duration-500 cursor-pointer">
-                    <h2>+</h2>
-                    <h2 className="counter">120</h2>
-                    <p>Projects Completed</p>
-                  </div>
-                </div>
-                <div className="info relative z-10 p-5">
-                  <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                    Cloud Solutions
-                  </h3>
-                  <p className="text-[#8892b0] mb-4">
-                    Scalable cloud infrastructure design and implementation using
-                    AWS, Azure, or Google Cloud to ensure your apps are always
-                    online.
-                  </p>
-                </div>
-              </div>
+              <ServiceCard
+                icon={webIcon}
+                title="Web Development"
+                description="Custom, responsive websites and web applications built with modern frameworks and best practices for speed and scalability."
+                target={120}
+              />
+              <ServiceCard
+                icon={mobileIcon}
+                title="Mobile Apps"
+                description="Native and cross-platform mobile applications that provide seamless user experiences on iOS and Android devices."
+                target={120}
+              />
+              <ServiceCard
+                icon={cloudIcon}
+                title="Cloud Solutions"
+                description="Scalable cloud infrastructure design and implementation using AWS, Azure, or Google Cloud to ensure your apps are always online."
+                target={120}
+              />
             </div>
             <div className="text-center mt-12">
               <Link
