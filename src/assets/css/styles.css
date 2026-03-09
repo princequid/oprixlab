@@ -51,3 +51,29 @@
   }
 }
 
+/* premium moving border for primary CTA buttons */
+@keyframes cta-border-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.btn-animated-border {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(rgba(2, 12, 27, 0.92), rgba(2, 12, 27, 0.92)) padding-box,
+    linear-gradient(90deg, #3b82f6, #8b5cf6, #22d3ee, #3b82f6) border-box;
+  background-size: 100% 100%, 300% 100%;
+  animation: cta-border-flow 4.5s linear infinite;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.18), 0 8px 18px rgba(10, 25, 47, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-animated-border {
+    animation: none;
+  }
+}
+
