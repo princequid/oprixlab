@@ -125,21 +125,28 @@ export default function About() {
                 than waiting for the "perfect" moment, we chose to act: build systems, deliver real
                 projects, and earn a reputation the right way.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#22d3ee]">
-                  <h3 className="text-xl font-bold text-[#22d3ee] mb-3">Year 1 — Build</h3>
-                  <p className="text-[#8892b0] leading-relaxed">
-                    Establish internal systems, onboard skilled members, deliver real client
-                    projects, and collect testimonials. Focus on execution and learning.
-                  </p>
-                </div>
-                <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#22d3ee]">
-                  <h3 className="text-xl font-bold text-[#22d3ee] mb-3">Year 2 — Refine</h3>
-                  <p className="text-[#8892b0] leading-relaxed">
-                    Improve structure, increase pricing, standardize documentation, and prepare for
-                    formal company registration. Scale sustainably with proven operational excellence.
-                  </p>
-                </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+              <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#22d3ee] h-full">
+                <h3 className="text-xl font-bold text-[#22d3ee] mb-3">Year 1 — Build</h3>
+                <p className="text-[#8892b0] leading-relaxed">
+                  Establish internal systems, onboard skilled members, deliver real client
+                  projects, and collect testimonials. Focus on execution and learning.
+                </p>
+              </div>
+              <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#22d3ee] h-full">
+                <h3 className="text-xl font-bold text-[#22d3ee] mb-3">Year 2 — Refine</h3>
+                <p className="text-[#8892b0] leading-relaxed">
+                  Improve structure, increase pricing, standardize documentation, and prepare for
+                  formal company registration. Scale sustainably with proven operational excellence.
+                </p>
+              </div>
+              <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#22d3ee] h-full">
+                <h3 className="text-xl font-bold text-[#22d3ee] mb-3">Year 3 — Evolve</h3>
+                <p className="text-[#8892b0] leading-relaxed">
+                  Expand into higher-value projects, deepen team specialization, and strengthen
+                  long-term client partnerships while continuously improving systems for sustainable growth.
+                </p>
               </div>
             </div>
           </div>
@@ -154,20 +161,37 @@ export default function About() {
             <div className="max-w-[800px] mx-auto">
               <div className="flex flex-col gap-4">
                 <div className="bg-[#22d3ee] text-[#020c1b] rounded-[15px] p-6 text-center shadow-lg">
-                  <h3 className="text-xl font-bold mb-1">Founder</h3>
-                  <p className="text-sm">Strategic head &amp; brand custodian — final approvals, client communication, quality control</p>
+                  <h3 className="text-xl font-bold mb-1">Founders</h3>
+                  <p className="text-sm">Foundational architects and long-term vision custodians; non-operational during the trial phase.</p>
+                </div>
+                <div className="flex justify-center">
+                  <div className="w-0.5 h-8 bg-[#22d3ee]"></div>
+                </div>
+                <div className="bg-[#0d1f3c] rounded-[15px] p-6 border border-[#22d3ee]/30">
+                  <h3 className="text-lg font-bold text-[#ccd6f6] mb-1 text-center">Executive Leadership Team</h3>
+                  <p className="text-sm text-[#8892b0] text-center mb-4">Manages day-to-day operations and executes strategy across Oprix Lab.</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-[#112240] rounded-[12px] p-4 text-center border border-[#22d3ee]/20">
+                      <h4 className="text-base font-bold text-[#ccd6f6] mb-1">President</h4>
+                      <p className="text-sm text-[#8892b0]">Operational head with final authority over project approval, quality control, and strategic direction.</p>
+                    </div>
+                    <div className="bg-[#112240] rounded-[12px] p-4 text-center border border-[#22d3ee]/20">
+                      <h4 className="text-base font-bold text-[#ccd6f6] mb-1">Vice President</h4>
+                      <p className="text-sm text-[#8892b0]">Deputy operational leader supporting coordination, compliance, and internal escalation management.</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="flex justify-center">
                   <div className="w-0.5 h-8 bg-[#22d3ee]"></div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#22d3ee]/30">
-                    <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Operations Manager</h3>
-                    <p className="text-sm text-[#8892b0]">Internal coordination, member verification, deadline monitoring, talent management</p>
+                    <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Operations &amp; Talent Management Team (Internal)</h3>
+                    <p className="text-sm text-[#8892b0]">Handles onboarding, verification, performance tracking, and internal coordination.</p>
                   </div>
                   <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#22d3ee]/30">
-                    <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Client Acquisition Team</h3>
-                    <p className="text-sm text-[#8892b0]">Lead generation, proposal preparation, marketing coordination</p>
+                    <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Client Acquisition Team (External)</h3>
+                    <p className="text-sm text-[#8892b0]">Leads prospecting, outreach, proposals, marketing coordination, and client relationship management.</p>
                   </div>
                 </div>
                 <div className="flex justify-center">
@@ -175,7 +199,7 @@ export default function About() {
                 </div>
                 <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#22d3ee]/30">
                   <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Members — Technical Pool</h3>
-                  <p className="text-sm text-[#8892b0]">Curated skilled professionals across web, mobile, IT, digital systems, and facilitation services</p>
+                  <p className="text-sm text-[#8892b0]">Technical professionals who execute assigned projects, meet milestones, and uphold service standards.</p>
                 </div>
               </div>
             </div>

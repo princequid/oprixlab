@@ -1,5 +1,6 @@
 ﻿import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import oprixLabsLogo from '../assets/images/oprix-labs-logo.png';
 
 const links = [
   { to: '/', label: 'Home' },
@@ -50,9 +51,26 @@ export default function Header() {
       <div className="flex items-center justify-between h-16 w-full pl-4 pr-0">
         <NavLink
           to="/"
-          className="text-2xl font-bold text-[#22d3ee] tracking-wider py-3 pr-8"
+          className="flex items-center gap-2 py-3 pr-8 no-underline"
         >
-          Oprix Labs
+          <img
+            src={oprixLabsLogo}
+            alt="Oprix Labs logo"
+            className="h-8 w-auto"
+          />
+          <span
+            className="text-2xl font-bold tracking-wider"
+            style={{
+              backgroundImage:
+                'linear-gradient(180deg, #0b8fb5 0%, #149fc2 70%, #e6f1ff 100%)',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              color: 'transparent',
+            }}
+          >
+            Oprix Labs
+          </span>
         </NavLink>
         <button
           className="lg:hidden text-[#22d3ee] text-2xl p-2"
