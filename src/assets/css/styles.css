@@ -77,3 +77,19 @@
   }
 }
 
+/* Smooth rotating-style gradient border for bright CTA buttons */
+.btn-gradient-border-flow {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#06b6d4, #06b6d4) padding-box,
+    linear-gradient(90deg, #22d3ee, #3b82f6, #06b6d4, #14b8a6, #22d3ee) border-box;
+  background-size: 100% 100%, 300% 100%;
+  animation: cta-border-flow 4.5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-gradient-border-flow {
+    animation: none;
+  }
+}
+
