@@ -85,7 +85,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <section aria-labelledby="company-overview">
             <div className="mb-5 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#2f4e74] bg-[#112240] text-sm font-semibold text-[#64ffda]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#2f4e74] bg-[#112240] text-sm font-semibold text-[#22d3ee]">
                 OL
               </div>
               <p className="text-lg font-semibold tracking-tight text-[#f1f5f9]">Oprix Labs</p>
@@ -116,12 +116,12 @@ export default function Footer() {
                   type="email"
                   autoComplete="email"
                   placeholder="Enter your email"
-                  className="h-11 w-full rounded-lg border border-[#2f4e74] bg-[#0b1f36] px-4 text-sm text-[#e2e8f0] placeholder:text-[#7b8fa9] focus:border-[#64ffda] focus:outline-none focus:ring-2 focus:ring-[#64ffda]/40"
+                  className="h-11 w-full rounded-lg border border-[#2f4e74] bg-[#0b1f36] px-4 text-sm text-[#e2e8f0] placeholder:text-[#7b8fa9] focus:border-[#22d3ee] focus:outline-none focus:ring-2 focus:ring-[#22d3ee]/40"
                   aria-required="true"
                 />
                 <button
                   type="submit"
-                  className="h-11 rounded-lg bg-[#64ffda] px-5 text-sm font-semibold text-[#03202a] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#84ffe4] focus:outline-none focus:ring-2 focus:ring-[#64ffda]/60"
+                  className="h-11 rounded-lg bg-[#22d3ee] px-5 text-sm font-semibold text-[#03202a] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#67e8f9] focus:outline-none focus:ring-2 focus:ring-[#22d3ee]/60"
                 >
                   Subscribe
                 </button>
@@ -143,7 +143,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     to={link.to}
-                    className="inline-flex items-center text-[#94a3b8] transition-all duration-300 hover:translate-x-1 hover:text-[#64ffda]"
+                    className="inline-flex items-center text-[#94a3b8] transition-all duration-300 hover:translate-x-1 hover:text-[#22d3ee]"
                   >
                     {link.label}
                   </Link>
@@ -162,7 +162,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-[#94a3b8]">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="transition-colors duration-300 hover:text-[#64ffda]">{service}</span>
+                  <span className="transition-colors duration-300 hover:text-[#22d3ee]">{service}</span>
                 </li>
               ))}
             </ul>
@@ -180,7 +180,7 @@ export default function Footer() {
                 <li key={item}>
                   <a
                     href="#"
-                    className="inline-flex items-center text-[#94a3b8] transition-all duration-300 hover:translate-x-1 hover:text-[#64ffda]"
+                    className="inline-flex items-center text-[#94a3b8] transition-all duration-300 hover:translate-x-1 hover:text-[#22d3ee]"
                   >
                     {item}
                   </a>
@@ -203,14 +203,14 @@ export default function Footer() {
                 Email:{' '}
                 <a
                   href="mailto:hello@oprixlabs.com"
-                  className="transition-colors duration-300 hover:text-[#64ffda]"
+                  className="transition-colors duration-300 hover:text-[#22d3ee]"
                 >
                   hello@oprixlabs.com
                 </a>
               </p>
               <p>
                 Phone:{' '}
-                <a href="tel:+15551234567" className="transition-colors duration-300 hover:text-[#64ffda]">
+                <a href="tel:+15551234567" className="transition-colors duration-300 hover:text-[#22d3ee]">
                   +1 (555) 123-4567
                 </a>
               </p>
@@ -229,7 +229,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={social.name}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#2f4e74] bg-[#0b1f36] text-[#cbd5e1] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#64ffda] hover:text-[#64ffda]"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#2f4e74] bg-[#0b1f36] text-[#cbd5e1] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#22d3ee] hover:text-[#22d3ee]"
                 >
                   {social.icon}
                 </a>
@@ -244,7 +244,7 @@ export default function Footer() {
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
               {legalLinks.map((legal) => (
                 <li key={legal}>
-                  <a href="#" className="transition-colors duration-300 hover:text-[#64ffda]">
+                  <a href="#" className="transition-colors duration-300 hover:text-[#22d3ee]">
                     {legal}
                   </a>
                 </li>

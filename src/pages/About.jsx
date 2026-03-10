@@ -126,15 +126,15 @@ export default function About() {
                 projects, and earn a reputation the right way.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#64ffda]">
-                  <h3 className="text-xl font-bold text-[#64ffda] mb-3">Year 1 — Build</h3>
+                <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#22d3ee]">
+                  <h3 className="text-xl font-bold text-[#22d3ee] mb-3">Year 1 — Build</h3>
                   <p className="text-[#8892b0] leading-relaxed">
                     Establish internal systems, onboard skilled members, deliver real client
                     projects, and collect testimonials. Focus on execution and learning.
                   </p>
                 </div>
-                <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#64ffda]">
-                  <h3 className="text-xl font-bold text-[#64ffda] mb-3">Year 2 — Refine</h3>
+                <div className="bg-[#112240] rounded-[15px] p-6 border-l-4 border-[#22d3ee]">
+                  <h3 className="text-xl font-bold text-[#22d3ee] mb-3">Year 2 — Refine</h3>
                   <p className="text-[#8892b0] leading-relaxed">
                     Improve structure, increase pricing, standardize documentation, and prepare for
                     formal company registration. Scale sustainably with proven operational excellence.
@@ -153,27 +153,27 @@ export default function About() {
             </h2>
             <div className="max-w-[800px] mx-auto">
               <div className="flex flex-col gap-4">
-                <div className="bg-[#64ffda] text-[#020c1b] rounded-[15px] p-6 text-center shadow-lg">
+                <div className="bg-[#22d3ee] text-[#020c1b] rounded-[15px] p-6 text-center shadow-lg">
                   <h3 className="text-xl font-bold mb-1">Founder</h3>
                   <p className="text-sm">Strategic head &amp; brand custodian — final approvals, client communication, quality control</p>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-0.5 h-8 bg-[#64ffda]"></div>
+                  <div className="w-0.5 h-8 bg-[#22d3ee]"></div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#64ffda]/30">
+                  <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#22d3ee]/30">
                     <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Operations Manager</h3>
                     <p className="text-sm text-[#8892b0]">Internal coordination, member verification, deadline monitoring, talent management</p>
                   </div>
-                  <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#64ffda]/30">
+                  <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#22d3ee]/30">
                     <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Client Acquisition Team</h3>
                     <p className="text-sm text-[#8892b0]">Lead generation, proposal preparation, marketing coordination</p>
                   </div>
                 </div>
                 <div className="flex justify-center">
-                  <div className="w-0.5 h-8 bg-[#64ffda]"></div>
+                  <div className="w-0.5 h-8 bg-[#22d3ee]"></div>
                 </div>
-                <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#64ffda]/30">
+                <div className="bg-[#0d1f3c] rounded-[15px] p-6 text-center border border-[#22d3ee]/30">
                   <h3 className="text-lg font-bold text-[#ccd6f6] mb-1">Members — Technical Pool</h3>
                   <p className="text-sm text-[#8892b0]">Curated skilled professionals across web, mobile, IT, digital systems, and facilitation services</p>
                 </div>
@@ -193,7 +193,7 @@ export default function About() {
             </p>
             <Link
               to="/contact"
-              className="btn-animated-border inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
+              className="btn-animated-border inline-block px-6 py-3 border-2 border-[#22d3ee] text-[#22d3ee] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300"
             >
               Get in Touch
             </Link>

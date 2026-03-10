@@ -93,7 +93,7 @@ export default function Portfolio() {
                       {project.tags.map((tag, idx) => (
                         <span
                           key={idx}
-                          className="font-['Fira Code',monospace] text-xs px-2 py-1 bg-[rgba(100,255,218,0.1)] text-[#64ffda] rounded"
+                          className="font-['Fira Code',monospace] text-xs px-2 py-1 bg-[rgba(34,211,238,0.1)] text-[#22d3ee] rounded"
                         >
                           {tag}
                         </span>
@@ -117,7 +117,7 @@ export default function Portfolio() {
             </p>
             <Link
               to="/contact"
-              className="btn-animated-border inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
+              className="btn-animated-border inline-block px-6 py-3 border-2 border-[#22d3ee] text-[#22d3ee] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300"
             >
               Start Your Project
             </Link>

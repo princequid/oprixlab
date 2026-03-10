@@ -39,7 +39,7 @@ export default function Header() {
 
   const linkClass = ({ isActive }) =>
     `text-sm font-medium no-underline transition-colors duration-200 ${
-      isActive ? 'text-[#64ffda]' : 'text-[#ccd6f6] hover:text-[#64ffda]'
+      isActive ? 'text-[#22d3ee]' : 'text-[#ccd6f6] hover:text-[#22d3ee]'
     }`;
 
   return (
@@ -50,12 +50,12 @@ export default function Header() {
       <div className="flex items-center justify-between h-16 w-full pl-4 pr-0">
         <NavLink
           to="/"
-          className="text-2xl font-bold text-[#64ffda] tracking-wider py-3 pr-8"
+          className="text-2xl font-bold text-[#22d3ee] tracking-wider py-3 pr-8"
         >
           OPRIX LAB
         </NavLink>
         <button
-          className="lg:hidden text-[#64ffda] text-2xl p-2"
+          className="lg:hidden text-[#22d3ee] text-2xl p-2"
           aria-label="Toggle navigation"
           aria-expanded={isMenuOpen}
           onClick={toggleMenu}
@@ -70,7 +70,7 @@ export default function Header() {
           ))}
           <NavLink
             to="/contact"
-            className="text-[#64ffda] inline-block px-6  border-2 border-[#64ffda] font-semibold rounded hover:bg-[rgba(100,255,218,0.1)] transition-all duration-300"
+            className="text-[#22d3ee] inline-block px-6  border-2 border-[#22d3ee] font-semibold rounded hover:bg-[rgba(34,211,238,0.1)] transition-all duration-300"
             onClick={closeMenu}
           >
             Contact
@@ -92,7 +92,7 @@ export default function Header() {
           ))}
           <NavLink
             to="/contact"
-            className="text-[#64ffda] inline-block px-6 py-2 border-2 border-[#64ffda] font-semibold rounded hover:bg-[rgba(100,255,218,0.1)] transition-all duration-300"
+            className="text-[#22d3ee] inline-block px-6 py-2 border-2 border-[#22d3ee] font-semibold rounded hover:bg-[rgba(34,211,238,0.1)] transition-all duration-300"
             onClick={closeMenu}
           >
             Contact

@@ -80,7 +80,7 @@ export default function Home() {
         <section className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-[#020c1b] to-[#011027]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="max-w-[800px]">
-              <span className="block text-[#64ffda] font-['Fira Code',monospace] mb-4 text-base">
+              <span className="block text-[#22d3ee] font-['Fira Code',monospace] mb-4 text-base">
                 Hi, we are Oprix Lab.
               </span>
               <h1 className="text-[4rem] font-bold leading-tight text-[#ccd6f6] mb-4">
@@ -96,13 +96,13 @@ export default function Home() {
               <div className="flex gap-4 flex-wrap">
                 <Link
                   to="/contact"
-                  className="inline-block px-6 py-3 bg-[#64ffda] text-[#020c1b] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.85)] hover:-translate-y-1 transition-all duration-300"
+                  className="inline-block px-6 py-3 bg-[#22d3ee] text-[#020c1b] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(34,211,238,0.85)] hover:-translate-y-1 transition-all duration-300"
                 >
                   Get Started
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
+                  className="inline-block px-6 py-3 border-2 border-[#22d3ee] text-[#22d3ee] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300"
                 >
                   Explore Services
                 </Link>
@@ -173,7 +173,7 @@ export default function Home() {
             <div className="text-center mt-12">
               <Link
                 to="/services"
-                className="inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
+                className="inline-block px-6 py-3 border-2 border-[#22d3ee] text-[#22d3ee] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300"
               >
                 View All Services
               </Link>
@@ -227,7 +227,7 @@ export default function Home() {
             </p>
             <Link
               to="/contact"
-              className="btn-animated-border inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
+              className="btn-animated-border inline-block px-6 py-3 border-2 border-[#22d3ee] text-[#22d3ee] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300"
             >
               Contact Us Today
             </Link>

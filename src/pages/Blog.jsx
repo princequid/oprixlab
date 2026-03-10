@@ -95,7 +95,7 @@ export default function Blog() {
                     {post.emoji}
                   </div>
                   <div className="p-6">
-                    <span className="inline-block px-2 py-1 bg-[rgba(100,255,218,0.1)] text-[#64ffda] rounded text-xs mb-2">
+                    <span className="inline-block px-2 py-1 bg-[rgba(34,211,238,0.1)] text-[#22d3ee] rounded text-xs mb-2">
                       {post.category}
                     </span>
                     <h3 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-2">
@@ -105,7 +105,7 @@ export default function Blog() {
                       By {post.author} • {post.date}
                     </p>
                     <p className="text-[#8892b0] mb-4 leading-relaxed">{post.excerpt}</p>
-                    <a href="#" className="text-[#64ffda] font-semibold inline-block mt-4">
+                    <a href="#" className="text-[#22d3ee] font-semibold inline-block mt-4">
                       Read More →
                     </a>
                   </div>
@@ -126,7 +126,7 @@ export default function Blog() {
             </p>
             <Link
               to="/contact"
-              className="btn-animated-border inline-block px-6 py-3 border-2 border-[#64ffda] text-[#64ffda] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(100,255,218,0.1)] hover:-translate-y-1 transition-all duration-300"
+              className="btn-animated-border inline-block px-6 py-3 border-2 border-[#22d3ee] text-[#22d3ee] font-semibold rounded no-underline cursor-pointer hover:bg-[rgba(34,211,238,0.1)] hover:-translate-y-1 transition-all duration-300"
             >
               Contact Us
             </Link>
