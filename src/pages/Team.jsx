@@ -1,3 +1,40 @@
+import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+export default function Team() {
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-br from-[#0f0f1e] to-[#1a1a2e] flex flex-col items-center justify-center px-5 py-[120px]">
+        <div className="text-center max-w-2xl mx-auto">
+          <p className="text-[#64ffda] text-sm font-semibold uppercase tracking-[0.3em] mb-6">
+            Oprix Lab
+          </p>
+          <h1 className="text-7xl sm:text-8xl font-black text-white mb-6 tracking-tight leading-none">
+            Coming<br />Soon
+          </h1>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#64ffda] to-[#0a192f] mx-auto rounded mb-8"></div>
+          <p className="text-lg text-gray-400 mb-10">
+            We're putting the finishing touches on our Team page. Check back shortly.
+          </p>
+          <Link
+            to="/"
+            className="inline-block bg-gradient-to-r from-[#64ffda] to-[#0a192f] text-black px-10 py-4 rounded-lg font-semibold text-base transition-all shadow-md shadow-[#64ffda]/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#64ffda]/50"
+          >
+            Back to Home
+          </Link>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+}
+
+/* ============================================================
+   ORIGINAL TEAM PAGE — uncomment when ready to go live
+   ============================================================
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
@@ -42,7 +79,7 @@ export default function Team() {
         'Marketing coordination',
         'Client onboarding support',
       ],
-      bio: 'The team responsible for growing Oprix Lab\'s client base — identifying opportunities, preparing proposals, and coordinating marketing efforts.',
+      bio: "The team responsible for growing Oprix Lab's client base — identifying opportunities, preparing proposals, and coordinating marketing efforts.",
     },
   ];
 
@@ -143,7 +180,6 @@ export default function Team() {
     <>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-[#0f0f1e] to-[#1a1a2e] px-5 sm:px-20 py-[60px]">
-        {/* Hero Section */}
         <section className="text-center mb-20 animate-fadeInDown pt-[60px]">
           <h1 className="text-5xl sm:text-5xl font-bold text-white mb-4 tracking-[-0.025em]">
             Meet the Team
@@ -154,7 +190,6 @@ export default function Team() {
           <div className="w-20 h-1 bg-gradient-to-r from-[#64ffda] to-[#0a192f] mx-auto rounded shadow-lg shadow-[rgba(100,255,218,0.5)]"></div>
         </section>
 
-        {/* Leadership */}
         <section className="mb-16 max-w-7xl mx-auto px-5">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
@@ -217,7 +252,6 @@ export default function Team() {
           </div>
         </section>
 
-        {/* Technical Pool */}
         <section className="max-w-7xl mx-auto mb-20 px-5">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Technical Pool</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -291,13 +325,15 @@ export default function Team() {
                 </div>
 
                 <div className="mt-5 pt-5 border-t border-[#64ffda]/10 flex justify-between items-center relative z-10">
-                  <button
+                  <Link
+                    to="/contact"
+                    onClick={(e) => e.stopPropagation()}
                     className={`bg-gradient-to-r from-[#64ffda] to-[#0a192f] text-black px-5 py-2 rounded text-sm font-semibold transition-all shadow-md shadow-[#64ffda]/30 hover:scale-105 hover:shadow-lg hover:shadow-[#64ffda]/50 ${
-                      expandedCard === member.id ? 'opacity-100' : 'opacity-0'
+                      expandedCard === member.id ? 'opacity-100' : 'opacity-0 pointer-events-none'
                     }`}
                   >
                     Get In Touch
-                  </button>
+                  </Link>
                   <span className="text-gray-500 text-xs font-medium tracking-wide group-hover:text-[#64ffda] transition-colors">
                     {expandedCard === member.id ? '✓ Click to collapse' : '+ Click for details'}
                   </span>
@@ -307,7 +343,6 @@ export default function Team() {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="text-center py-16 px-10 bg-gradient-to-br from-[#64ffda]/5 to-blue-500/5 border border-[#64ffda]/20 rounded-xl max-w-2xl mx-auto animate-fadeInUp">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
           <p className="text-lg text-gray-300 mb-8">
@@ -325,3 +360,5 @@ export default function Team() {
     </>
   );
 }
+
+============================================================ */

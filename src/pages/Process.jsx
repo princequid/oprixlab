@@ -60,13 +60,6 @@ export default function Process() {
         'The completed project is delivered to the client. Final walkthrough, documentation, or handover instructions are provided as needed.',
       deliverables: 'Final delivery, handover documentation',
     },
-    {
-      number: '09',
-      title: 'Member Payout & Commission Allocation',
-      description:
-        'Upon successful delivery, the assigned member receives their agreed payout. Oprix Lab retains its commission per the internal compensation structure.',
-      deliverables: 'Member payout, commission record',
-    },
   ];
 
   return (
