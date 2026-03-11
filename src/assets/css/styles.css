@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ─── Global component utilities ────────────────────────────────────────────── */
 @layer components {
   .btn {
-    @apply inline-block px-6 py-3 border-2 font-semibold rounded transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:ring-offset-2;
+    @apply inline-block px-6 py-3 border-2 font-semibold rounded transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a192f];
   }
   .container {
     @apply mx-auto px-4 sm:px-6 lg:px-8;
@@ -59,7 +59,15 @@ h1, h2, h3, h4, h5, h6 {
   input:focus,
   textarea:focus,
   select:focus {
-    @apply outline-none ring-2 ring-[var(--color-accent)] ring-offset-2;
+    @apply outline-none;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply ring-2 ring-[var(--color-accent)]/45 ring-offset-2 ring-offset-[#0a192f];
   }
 }
 

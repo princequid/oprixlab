@@ -20,7 +20,7 @@ export default function Services() {
         </section>
 
         {/* Service 1 — Web Solutions */}
-        <section className="py-16 bg-[#020c1b]">
+        <section id="web-solutions" className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
               <div>
@@ -52,7 +52,7 @@ export default function Services() {
         <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
 
         {/* Service 2 — Web Applications */}
-        <section className="py-16 bg-[#020c1b]">
+        <section id="web-applications" className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
               <div>
@@ -113,7 +113,7 @@ export default function Services() {
         <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
 
         {/* Service 4 — IT Support & Technical Services */}
-        <section className="py-16 bg-[#020c1b]">
+        <section id="it-support-technical-services" className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
               <div>
@@ -144,7 +144,7 @@ export default function Services() {
         <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
 
         {/* Service 5 — Infrastructure & Online Setup */}
-        <section className="py-16 bg-[#020c1b]">
+        <section id="infrastructure-online-setup" className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
               <div>
@@ -173,7 +173,7 @@ export default function Services() {
         <hr className="border-0 border-t border-[#112240] max-w-[1200px] mx-auto" />
 
         {/* Service 6 — Digital Systems & Automation */}
-        <section className="py-16 bg-[#020c1b]">
+        <section id="digital-systems-automation" className="py-16 bg-[#020c1b]">
           <div className="max-w-[1200px] mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
               <div>

@@ -34,9 +34,9 @@ export default function Process() {
     },
     {
       number: '05',
-      title: 'Founder Approval',
+      title: 'Executive Approval',
       description:
-        'The Founder reviews the recommended assignment and grants final approval. This ensures every project is assigned with strategic oversight and quality assurance in mind.',
+        'The Executive team reviews the recommended assignment and grants final approval. This ensures every project is assigned with strategic oversight and quality assurance in mind.',
       deliverables: 'Assignment approval',
     },
     {
@@ -82,14 +82,17 @@ export default function Process() {
         <section className="py-16 bg-[#020c1b]">
           <div className="max-w-[800px] mx-auto px-8">
             {steps.map((step, idx) => (
-              <div key={idx} className="flex mb-12 relative">
-                <div className="font-['Fira Code',monospace] text-6xl font-bold text-[#112240] mr-8 leading-none opacity-50 hover:text-[#22d3ee] hover:opacity-100 transition-all duration-300">
+              <div
+                key={idx}
+                className="group flex mb-12 relative"
+              >
+                <div
+                  className="font-['Fira Code',monospace] text-6xl font-bold mr-8 leading-none text-[#112240] opacity-50 transition-all duration-300 group-hover:text-[#22d3ee] group-hover:opacity-100"
+                >
                   {step.number}
                 </div>
                 <div
-                  className={`flex-1 ${
-                    idx !== steps.length - 1 ? 'border-l-2' : ''
-                  } border-[#112240] pl-8 pb-8`}
+                  className="flex-1 border-l-2 border-[#112240] pl-8 pb-8 transition-colors duration-300 group-hover:border-[#22d3ee]"
                 >
                   <h2 className="text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
                     {step.title}
@@ -136,6 +139,40 @@ export default function Process() {
               <li>No impersonation of individuals, institutions, or organizations</li>
               <li>All services must remain lawful under applicable regulations</li>
             </ul>
+
+            <div className="mt-12 max-w-[900px] space-y-10">
+              <div>
+                <h3 className="text-2xl font-bold leading-tight text-[#ccd6f6] mb-4">
+                  Privacy Policy
+                </h3>
+                <p className="text-[#8892b0] mb-4 leading-relaxed">
+                  Oprix Labs collects only the information required to deliver and support client
+                  services, such as contact details, project requirements, and communication records.
+                </p>
+                <ul className="list-disc ml-6 text-[#8892b0] space-y-2">
+                  <li>Client information is used solely for project communication, delivery, and support.</li>
+                  <li>We do not sell or rent personal data to third parties.</li>
+                  <li>Data access is restricted to authorized team members assigned to a project.</li>
+                  <li>Reasonable technical and organizational safeguards are applied to protect stored data.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold leading-tight text-[#ccd6f6] mb-4">
+                  Terms of Service
+                </h3>
+                <p className="text-[#8892b0] mb-4 leading-relaxed">
+                  By engaging Oprix Labs, clients agree to the project scope, payment terms, and
+                  delivery process defined in the approved proposal or written agreement.
+                </p>
+                <ul className="list-disc ml-6 text-[#8892b0] space-y-2">
+                  <li>Work begins only after payment confirmation according to agreed billing terms.</li>
+                  <li>Clients must provide accurate project requirements and timely feedback.</li>
+                  <li>Delivery timelines may be adjusted if scope changes or required inputs are delayed.</li>
+                  <li>All services must be requested and used for lawful purposes only.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 

@@ -39,8 +39,10 @@ export default function Header() {
   }, [isMenuOpen]);
 
   const linkClass = ({ isActive }) =>
-    `text-sm font-medium no-underline transition-colors duration-200 ${
-      isActive ? 'text-[#22d3ee]' : 'text-[#ccd6f6] hover:text-[#22d3ee]'
+    `text-sm font-medium no-underline rounded-md px-2 py-1 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a192f] ${
+      isActive
+        ? 'text-[#22d3ee] bg-[rgba(34,211,238,0.08)]'
+        : 'text-[#ccd6f6] hover:text-[#22d3ee] hover:bg-[rgba(34,211,238,0.06)]'
     }`;
 
   return (
@@ -51,7 +53,7 @@ export default function Header() {
       <div className="flex items-center justify-between h-16 w-full pl-4 pr-0">
         <NavLink
           to="/"
-          className="flex items-center gap-2 py-3 pr-8 no-underline"
+          className="flex items-center gap-2 py-3 pr-8 no-underline focus:outline-none focus:ring-0 focus-visible:ring-0 focus:ring-offset-0 focus-visible:ring-offset-0"
         >
           <img
             src={oprixLabsLogo}
@@ -88,7 +90,7 @@ export default function Header() {
           ))}
           <NavLink
             to="/contact"
-            className="text-[#22d3ee] inline-block px-6  border-2 border-[#22d3ee] font-semibold rounded hover:bg-[rgba(34,211,238,0.1)] transition-all duration-300"
+            className="text-[#22d3ee] inline-block px-6 border-2 border-[#22d3ee] font-semibold rounded hover:bg-[rgba(34,211,238,0.1)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a192f]"
             onClick={closeMenu}
           >
             Contact
@@ -110,7 +112,7 @@ export default function Header() {
           ))}
           <NavLink
             to="/contact"
-            className="text-[#22d3ee] inline-block px-6 py-2 border-2 border-[#22d3ee] font-semibold rounded hover:bg-[rgba(34,211,238,0.1)] transition-all duration-300"
+            className="text-[#22d3ee] inline-block px-6 py-2 border-2 border-[#22d3ee] font-semibold rounded hover:bg-[rgba(34,211,238,0.1)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a192f]"
             onClick={closeMenu}
           >
             Contact

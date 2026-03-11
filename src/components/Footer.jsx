@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import oprixLogo from '../assets/images/oprix-labs-logo.png';
 
@@ -6,21 +5,20 @@ const quickLinks = [
   { label: 'Home', to: '/' },
   { label: 'About Us', to: '/about' },
   { label: 'Services', to: '/services' },
-  { label: 'Projects / Portfolio', to: '/portfolio' },
-  { label: 'Blog', to: '/blog' },
+  // { label: 'Projects / Portfolio', to: '/portfolio' },
+  // { label: 'Blog', to: '/blog' },
+  { label: 'Team', to: '/team' },
   { label: 'Contact', to: '/contact' },
 ];
 
 const services = [
-  'Web Development',
-  'Software Development',
-  'Digital Transformation',
-  'UI/UX Design',
-  'Cloud Solutions',
-  'IT Consulting',
+  { label: 'Web Development', to: '/services#web-solutions' },
+  { label: 'Software Development', to: '/services#web-applications' },
+  { label: 'Digital Transformation', to: '/services#digital-systems-automation' },
+  { label: 'UI/UX Design', to: '/services#web-solutions' },
+  { label: 'Cloud Solutions', to: '/services#infrastructure-online-setup' },
+  { label: 'IT Consulting', to: '/services#it-support-technical-services' },
 ];
-
-const resources = ['Blog', 'Case Studies', 'FAQs', 'Documentation', 'Support'];
 
 const socialLinks = [
   {
@@ -34,10 +32,20 @@ const socialLinks = [
   },
   {
     name: 'Twitter / X',
-    href: 'https://x.com',
+    href: '#',
+    disabled: true,
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
         <path d="M18.9 2H22L15.23 9.74L23.2 22H16.96L12.08 14.57L5.57 22H2.46L9.7 13.72L2.06 2H8.46L12.87 8.79L18.9 2ZM17.81 20.03H19.53L7.52 3.86H5.66L17.81 20.03Z" />
+      </svg>
+    ),
+  },
+  {
+    name: 'WhatsApp',
+    href: 'https://wa.me/233000000000',
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
+        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.47 0 0.12 5.35 0.12 11.94C0.12 14.04 0.67 16.09 1.71 17.9L0 24L6.26 22.36C8 23.31 9.95 23.8 11.94 23.8H11.95C18.53 23.8 23.88 18.45 23.88 11.87C23.88 8.67 22.63 5.66 20.52 3.48ZM11.95 21.79H11.94C10.17 21.79 8.43 21.32 6.9 20.42L6.54 20.21L2.83 21.18L3.82 17.56L3.58 17.18C2.6 15.62 2.08 13.82 2.08 11.94C2.08 6.45 6.54 1.99 12.05 1.99C14.71 1.99 17.22 3.03 19.1 4.92C20.98 6.8 22.02 9.31 22.01 11.97C22.01 17.46 17.54 21.79 11.95 21.79ZM17.43 14.28C17.13 14.13 15.67 13.41 15.39 13.31C15.11 13.21 14.91 13.16 14.7 13.46C14.5 13.76 13.92 14.43 13.74 14.64C13.56 14.84 13.38 14.87 13.08 14.72C12.78 14.57 11.82 14.25 10.69 13.24C9.82 12.46 9.23 11.5 9.05 11.2C8.87 10.9 9.03 10.74 9.18 10.59C9.31 10.46 9.48 10.26 9.63 10.08C9.78 9.9 9.83 9.77 9.93 9.57C10.03 9.37 9.98 9.19 9.9 9.04C9.82 8.89 9.23 7.44 8.99 6.87C8.76 6.32 8.52 6.39 8.34 6.38C8.17 6.37 7.98 6.37 7.78 6.37C7.58 6.37 7.26 6.44 6.98 6.74C6.7 7.04 5.92 7.76 5.92 9.23C5.92 10.69 7.01 12.11 7.16 12.31C7.31 12.51 9.24 15.5 12.2 16.78C14.04 17.57 14.76 17.64 15.33 17.56C16 17.46 17.4 16.86 17.68 16.08C17.96 15.3 17.96 14.64 17.88 14.5C17.8 14.35 17.73 14.43 17.43 14.28Z" />
       </svg>
     ),
   },
@@ -52,7 +60,8 @@ const socialLinks = [
   },
   {
     name: 'Instagram',
-    href: 'https://www.instagram.com',
+    href: '#',
+    disabled: true,
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
         <path d="M7.75 2H16.25C19.42 2 22 4.58 22 7.75V16.25C22 19.42 19.42 22 16.25 22H7.75C4.58 22 2 19.42 2 16.25V7.75C2 4.58 4.58 2 7.75 2ZM7.55 4A3.56 3.56 0 0 0 4 7.55V16.45A3.56 3.56 0 0 0 7.55 20H16.45A3.56 3.56 0 0 0 20 16.45V7.55A3.56 3.56 0 0 0 16.45 4H7.55ZM17.5 5.5A1 1 0 1 1 17.5 7.5A1 1 0 0 1 17.5 5.5ZM12 7A5 5 0 1 1 12 17A5 5 0 0 1 12 7ZM12 9A3 3 0 1 0 12 15A3 3 0 0 0 12 9Z" />
@@ -61,7 +70,8 @@ const socialLinks = [
   },
   {
     name: 'Facebook',
-    href: 'https://www.facebook.com',
+    href: '#',
+    disabled: true,
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
         <path d="M13.5 22V13.88H16.2L16.61 10.72H13.5V8.7C13.5 7.78 13.76 7.16 15.1 7.16H16.72V4.34C15.93 4.25 15.13 4.2 14.34 4.2C11.99 4.2 10.38 5.63 10.38 8.27V10.72H7.69V13.88H10.38V22H13.5Z" />
@@ -70,15 +80,14 @@ const socialLinks = [
   },
 ];
 
-const legalLinks = ['Privacy Policy', 'Terms of Service', 'Cookie Policy'];
+const legalLinks = [
+  { label: 'Privacy Policy', to: '/about' },
+  { label: 'Terms of Service', to: '/about' },
+];
 
 export default function Footer() {
-  const [newsletterState, setNewsletterState] = useState('idle');
-
-  const handleNewsletterSubmit = (event) => {
-    event.preventDefault();
-    setNewsletterState('success');
-  };
+  const activeSocialLinks = socialLinks.filter((social) => !social.disabled);
+  const disabledSocialLinks = socialLinks.filter((social) => social.disabled);
 
   return (
     <footer className="mt-auto border-t border-[#1f3a5f] bg-[#08182c] text-[#cbd5e1]" aria-label="Site footer">
@@ -98,6 +107,7 @@ export default function Footer() {
               innovation.
             </p>
 
+            {/*
             <div className="mt-8">
               <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#7dd3fc]">
                 Subscribe to updates
@@ -115,12 +125,12 @@ export default function Footer() {
                   type="email"
                   autoComplete="email"
                   placeholder="Enter your email"
-                  className="h-11 w-full rounded-lg border border-[#2f4e74] bg-[#0b1f36] px-4 text-sm text-[#e2e8f0] placeholder:text-[#7b8fa9] focus:border-[#22d3ee] focus:outline-none focus:ring-2 focus:ring-[#22d3ee]/40"
+                  className="h-11 w-full rounded-lg border border-[#2f4e74] bg-[#0b1f36] px-4 text-sm text-[#e2e8f0] placeholder:text-[#7b8fa9] focus:outline-none focus-visible:border-[#22d3ee] focus-visible:ring-2 focus-visible:ring-[#22d3ee]/40"
                   aria-required="true"
                 />
                 <button
                   type="submit"
-                  className="h-11 rounded-lg bg-[#22d3ee] px-5 text-sm font-semibold text-[#03202a] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#67e8f9] focus:outline-none focus:ring-2 focus:ring-[#22d3ee]/60"
+                  className="h-11 rounded-lg bg-[#22d3ee] px-5 text-sm font-semibold text-[#03202a] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#67e8f9] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/60"
                 >
                   Subscribe
                 </button>
@@ -131,6 +141,7 @@ export default function Footer() {
                   : 'Get product updates and engineering insights in your inbox.'}
               </p>
             </div>
+            */}
           </section>
 
           <nav aria-label="Quick links">
@@ -142,7 +153,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     to={link.to}
-                    className="inline-flex items-center text-[#94a3b8] transition-all duration-300 hover:translate-x-1 hover:text-[#22d3ee]"
+                    className="inline-flex items-center rounded-md px-2 py-1 -mx-2 -my-1 text-[#94a3b8] transition-all duration-300 hover:translate-x-1 hover:text-[#22d3ee] hover:bg-[rgba(34,211,238,0.08)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]"
                   >
                     {link.label}
                   </Link>
@@ -160,14 +171,19 @@ export default function Footer() {
             </h2>
             <ul className="mt-4 space-y-3 text-sm text-[#94a3b8]">
               {services.map((service) => (
-                <li key={service}>
-                  <span className="transition-colors duration-300 hover:text-[#22d3ee]">{service}</span>
+                <li key={service.label}>
+                  <Link
+                    to={service.to}
+                    className="inline-flex items-center rounded-md px-2 py-1 -mx-2 -my-1 transition-all duration-300 hover:text-[#22d3ee] hover:bg-[rgba(34,211,238,0.08)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]"
+                  >
+                    {service.label}
+                  </Link>
                 </li>
               ))}
             </ul>
           </section>
 
-          <section aria-labelledby="resources-footer-heading">
+          {/* <section aria-labelledby="resources-footer-heading">
             <h2
               id="resources-footer-heading"
               className="text-sm font-semibold uppercase tracking-[0.14em] text-[#f8fafc]"
@@ -179,14 +195,14 @@ export default function Footer() {
                 <li key={item}>
                   <a
                     href="#"
-                    className="inline-flex items-center text-[#94a3b8] transition-all duration-300 hover:translate-x-1 hover:text-[#22d3ee]"
+                    className="inline-flex items-center rounded-md px-2 py-1 -mx-2 -my-1 text-[#94a3b8] transition-all duration-300 hover:translate-x-1 hover:text-[#22d3ee] hover:bg-[rgba(34,211,238,0.08)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]"
                   >
                     {item}
                   </a>
                 </li>
               ))}
             </ul>
-          </section>
+          </section> */}
         </div>
 
         <div className="mt-12 grid gap-8 border-t border-[#1f3a5f] pt-8 lg:grid-cols-[1.1fr_1fr] lg:items-start">
@@ -201,37 +217,46 @@ export default function Footer() {
               <p>
                 Email:{' '}
                 <a
-                  href="mailto:hello@oprixlabs.com"
-                  className="transition-colors duration-300 hover:text-[#22d3ee]"
+                  href="mailto:oprixlabs@gmail.com"
+                  className="rounded-sm px-1 -mx-1 transition-colors duration-300 hover:text-[#22d3ee] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]"
                 >
-                  hello@oprixlabs.com
+                  oprixlabs@gmail.com
                 </a>
               </p>
               <p>
                 Phone:{' '}
-                <a href="tel:+15551234567" className="transition-colors duration-300 hover:text-[#22d3ee]">
-                  +1 (555) 123-4567
+                <a href="tel:+233551234567" className="rounded-sm px-1 -mx-1 transition-colors duration-300 hover:text-[#22d3ee] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]">
+                  (+233) 551 234 567
                 </a>
               </p>
-              <p>Office: 200 Innovation Drive, Austin, TX 78701</p>
-              <p>Hours: Mon - Fri, 9:00 AM - 6:00 PM</p>
+              <p>Hours: Mon - Sat, 9:00 AM - 6:00 PM</p>
             </address>
           </section>
 
           <section aria-label="Social media links">
             <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-[#f8fafc]">Social</h2>
-            <div className="mt-4 flex flex-wrap gap-3">
-              {socialLinks.map((social) => (
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              {activeSocialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
                   aria-label={social.name}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#2f4e74] bg-[#0b1f36] text-[#cbd5e1] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#22d3ee] hover:text-[#22d3ee]"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[#2f4e74] bg-[#0b1f36] text-[#cbd5e1] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#22d3ee] hover:text-[#22d3ee] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]"
                 >
                   {social.icon}
                 </a>
+              ))}
+              {disabledSocialLinks.map((social) => (
+                <span
+                  key={social.name}
+                  aria-label={`${social.name} (coming soon)`}
+                  title={`${social.name} (coming soon)`}
+                  className="inline-flex h-10 w-10 cursor-not-allowed items-center justify-center rounded-lg border border-[#304860] bg-[#0b1f36] text-[#6b7d92]"
+                >
+                  {social.icon}
+                </span>
               ))}
             </div>
           </section>
@@ -242,16 +267,14 @@ export default function Footer() {
             <p>&copy; {new Date().getFullYear()} Oprix Labs. All rights reserved.</p>
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
               {legalLinks.map((legal) => (
-                <li key={legal}>
-                  <a href="#" className="transition-colors duration-300 hover:text-[#22d3ee]">
-                    {legal}
-                  </a>
+                <li key={legal.label}>
+                  <Link to={legal.to} className="rounded-sm px-1 -mx-1 transition-colors duration-300 hover:text-[#22d3ee] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#22d3ee]/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08182c]">
+                    {legal.label}
+                  </Link>
                 </li>
               ))}
             </ul>
-            <p>
-              Built with <span aria-hidden="true">❤</span> by Oprix Labs
-            </p>
+            <p>Built by Oprix Labs</p>
           </div>
         </div>
       </div>
