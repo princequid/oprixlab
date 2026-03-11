@@ -349,3 +349,59 @@ h1, h2, h3, h4, h5, h6 {
   .about-scroll-progress { display: none; }
   .about-value-card::before { display: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   SERVICES PAGE — UI UPGRADE STYLES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ─── Icon badge ──────────────────────────────────────────────────────────── */
+.services-icon-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 255, 0.04));
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  box-shadow: 0 0 18px rgba(0, 102, 255, 0.1), inset 0 0 16px rgba(0, 212, 255, 0.03);
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+}
+
+.services-icon-badge:hover {
+  box-shadow: 0 0 28px rgba(0, 212, 255, 0.22), inset 0 0 16px rgba(0, 212, 255, 0.06);
+  border-color: rgba(0, 212, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+/* ─── Custom list items ───────────────────────────────────────────────────── */
+.services-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #8892b0;
+  line-height: 1.6;
+}
+
+.services-list-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00d4ff;
+  margin-top: 9px;
+  box-shadow: 0 0 6px rgba(0, 212, 255, 0.5);
+}
+
+/* ─── Animated scan-line section divider ─────────────────────────────────── */
+.services-scan-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), rgba(0, 102, 255, 0.15), transparent);
+}
+
+/* ─── Reduced motion overrides ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .services-icon-badge { transition: none; }
+  .services-scan-divider { transform: none !important; }
+}
