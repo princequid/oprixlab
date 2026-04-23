@@ -67,34 +67,34 @@ export default function Process() {
       <Header />
       <main className="bg-[#020c1b] text-[#8892b0] font-['Inter',system-ui,-apple-system,sans-serif] antialiased leading-relaxed">
         {/* Page Header */}
-        <section className="bg-[#020c1b] pt-[110px] pb-10 sm:pt-[120px]">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-[#ccd6f6] mb-4">
+        <section className="py-16 bg-[#020c1b] pt-[120px] pb-10">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-8 text-center">
+            <h1 className="text-[2.35rem] sm:text-[3rem] font-bold leading-tight text-[#ccd6f6] mb-4">
               How We Work
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl leading-relaxed max-w-[600px] mx-auto text-[#8892b0]">
+            <p className="text-lg sm:text-xl leading-relaxed max-w-[600px] mx-auto text-[#8892b0]">
               A transparent, structured project flow from inquiry to delivery, with accountability at every step.
             </p>
           </div>
         </section>
 
         {/* Process Steps */}
-        <section className="py-12 sm:py-16 bg-[#020c1b]">
-          <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 bg-[#020c1b]">
+          <div className="max-w-[800px] mx-auto px-4 sm:px-8">
             {steps.map((step, idx) => (
               <div
                 key={idx}
-                className="group mb-10 sm:mb-12 relative sm:flex"
+                className="group flex mb-10 sm:mb-12 relative items-start"
               >
                 <div
-                  className="font-['Fira Code',monospace] text-4xl sm:text-6xl font-bold sm:mr-8 leading-none text-[#112240] opacity-50 transition-all duration-300 group-hover:text-[#22d3ee] group-hover:opacity-100"
+                  className="font-['Fira Code',monospace] text-5xl sm:text-6xl font-bold mr-4 sm:mr-8 leading-none text-[#112240] opacity-50 transition-all duration-300 group-hover:text-[#22d3ee] group-hover:opacity-100 shrink-0"
                 >
                   {step.number}
                 </div>
                 <div
-                  className="mt-3 sm:mt-0 flex-1 border-t-2 pt-4 sm:border-t-0 sm:border-l-2 sm:pl-8 sm:pt-0 pb-8 border-[#112240] transition-colors duration-300 group-hover:border-[#22d3ee]"
+                  className="flex-1 border-l-2 border-[#112240] pl-4 sm:pl-8 pb-8 transition-colors duration-300 group-hover:border-[#22d3ee]"
                 >
-                  <h2 className="text-2xl sm:text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                  <h2 className="text-[1.5rem] sm:text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
                     {step.title}
                   </h2>
                   <p className="text-[#8892b0] mb-4 leading-relaxed">
@@ -110,9 +110,9 @@ export default function Process() {
         </section>
 
         {/* Member Visibility Policy */}
-        <section className="py-12 sm:py-16 bg-[#112240]">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-6">
+        <section className="py-16 bg-[#112240]">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-8">
+            <h2 className="text-[2rem] sm:text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-6">
               Member Visibility Policy
             </h2>
             <p className="text-[#8892b0] leading-relaxed max-w-[700px]">
@@ -124,9 +124,9 @@ export default function Process() {
         </section>
 
         {/* Ethical & Service Limitations */}
-        <section className="py-12 sm:py-16 bg-[#020c1b]">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-6">
+        <section className="py-16 bg-[#020c1b]">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-8">
+            <h2 className="text-[2rem] sm:text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-6">
               Ethical &amp; Service Limitations
             </h2>
             <p className="text-[#8892b0] mb-6 leading-relaxed max-w-[700px]">
@@ -143,9 +143,9 @@ export default function Process() {
         </section>
 
         {/* CTA */}
-        <section className="py-12 sm:py-16 text-center bg-[#112240]">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+        <section className="py-16 text-center bg-[#112240]">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-8">
+            <h2 className="text-[2rem] sm:text-[2.5rem] font-bold leading-tight text-[#ccd6f6] mb-4">
               Ready to start your project?
             </h2>
             <p className="text-[#8892b0] mb-8 leading-relaxed">
