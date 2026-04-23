@@ -67,7 +67,7 @@ function SocialLinks({ github, linkedin }) {
         >
           {children}
         </span>
-        <span className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-max max-w-[140px] -translate-x-1/2 rounded bg-[#0f172a] px-2.5 py-1.5 text-center text-[10px] leading-tight text-gray-200 opacity-0 shadow-lg shadow-black/20 transition-opacity duration-200 group-hover/social-icon:opacity-100 sm:max-w-none sm:whitespace-nowrap sm:text-[11px]">
+        <span className="pointer-events-none absolute bottom-full left-0 z-20 mb-2 w-max max-w-[140px] rounded bg-[#0f172a] px-2.5 py-1.5 text-center text-[10px] leading-tight text-gray-200 opacity-0 shadow-lg shadow-black/20 transition-opacity duration-200 group-hover/social-icon:opacity-100 sm:left-1/2 sm:max-w-none sm:-translate-x-1/2 sm:whitespace-nowrap sm:text-[11px]">
           no link available yet
         </span>
       </span>
