@@ -254,17 +254,7 @@ function LogoCanvas3D() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      style={{
-        position: 'absolute',
-        top: '50%',
-        right: '4%',
-        transform: 'translateY(-50%)',
-        width: 'min(38vw, 440px)',
-        height: 'min(38vw, 440px)',
-        opacity: 0.88,
-        pointerEvents: 'none',
-        zIndex: 1,
-      }}
+      className="hero-logo-canvas"
     />
   );
 }

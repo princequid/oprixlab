@@ -35,6 +35,7 @@ function PersonAvatar({ gender }) {
 // ── Social Links ──────────────────────────────────────────────
 function SocialLinks({ github, linkedin }) {
   const isValidSocialUrl = (url) => typeof url === 'string' && /^https?:\/\/\S+$/i.test(url.trim());
+  const [openTooltip, setOpenTooltip] = useState(null);
 
   const renderSocialIcon = ({ href, label, children }) => {
     const hasValidLink = isValidSocialUrl(href);
@@ -59,15 +60,32 @@ function SocialLinks({ github, linkedin }) {
       <span
         className="relative inline-flex group/social-icon"
         onClick={(e) => e.stopPropagation()}
+        onMouseLeave={() => setOpenTooltip(null)}
       >
-        <span
-          className={`${baseClasses} text-gray-600 cursor-not-allowed hover:text-gray-400 hover:scale-110`}
+        <button
+          type="button"
+          className={`${baseClasses} bg-transparent border-0 p-0 leading-none text-gray-600 cursor-not-allowed hover:text-gray-400 hover:scale-110`}
           aria-label={`${label} no link available yet`}
           title="No link available yet"
+          onClick={(e) => {
+            e.stopPropagation();
+            setOpenTooltip((prev) => (prev === label ? null : label));
+          }}
+          onFocus={() => setOpenTooltip(label)}
+          onBlur={() => setOpenTooltip(null)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              setOpenTooltip(null);
+            }
+          }}
         >
           {children}
-        </span>
-        <span className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-max max-w-[140px] -translate-x-[35%] rounded bg-[#0f172a] px-2.5 py-1.5 text-center text-[10px] leading-tight text-gray-200 opacity-0 shadow-lg shadow-black/20 transition-opacity duration-200 group-hover/social-icon:opacity-100 sm:max-w-none sm:-translate-x-1/2 sm:whitespace-nowrap sm:text-[11px]">
+        </button>
+        <span
+          className={`pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-max max-w-[140px] -translate-x-[35%] rounded bg-[#0f172a] px-2.5 py-1.5 text-center text-[10px] leading-tight text-gray-200 shadow-lg shadow-black/20 transition-opacity duration-200 group-hover/social-icon:opacity-100 group-focus-within/social-icon:opacity-100 sm:max-w-none sm:-translate-x-1/2 sm:whitespace-nowrap sm:text-[11px] ${
+            openTooltip === label ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           no link available yet
         </span>
       </span>

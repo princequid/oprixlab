@@ -1,8 +1,11 @@
-﻿import { Link } from 'react-router-dom';
+﻿import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function Process() {
+  const [activeStep, setActiveStep] = useState(null);
+
   const steps = [
     {
       number: '01',
@@ -81,31 +84,48 @@ export default function Process() {
         {/* Process Steps */}
         <section className="py-16 bg-[#020c1b]">
           <div className="max-w-[800px] mx-auto px-4 sm:px-8">
-            {steps.map((step, idx) => (
-              <div
-                key={idx}
-                className="group flex mb-10 sm:mb-12 relative items-start"
-              >
+            {steps.map((step, idx) => {
+              const isActive = activeStep === idx;
+              return (
                 <div
-                  className="font-['Fira Code',monospace] text-5xl sm:text-6xl font-bold mr-4 sm:mr-8 leading-none text-[#112240] opacity-50 transition-all duration-300 group-hover:text-[#22d3ee] group-hover:opacity-100 shrink-0"
+                  key={idx}
+                  className="group flex mb-10 sm:mb-12 relative items-start"
+                  tabIndex={0}
+                  onPointerDown={() => setActiveStep(idx)}
+                  onFocus={() => setActiveStep(idx)}
+                  onBlur={() => setActiveStep(null)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setActiveStep(idx);
+                    }
+                  }}
                 >
-                  {step.number}
+                  <div
+                    className={`font-['Fira Code',monospace] text-5xl sm:text-6xl font-bold mr-4 sm:mr-8 leading-none transition-all duration-300 group-hover:text-[#22d3ee] group-hover:opacity-100 shrink-0 ${
+                      isActive ? 'text-[#22d3ee] opacity-100' : 'text-[#112240] opacity-50'
+                    }`}
+                  >
+                    {step.number}
+                  </div>
+                  <div
+                    className={`flex-1 border-l-2 pl-4 sm:pl-8 pb-8 transition-colors duration-300 group-hover:border-[#22d3ee] ${
+                      isActive ? 'border-[#22d3ee]' : 'border-[#112240]'
+                    }`}
+                  >
+                    <h2 className="text-[1.5rem] sm:text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
+                      {step.title}
+                    </h2>
+                    <p className="text-[#8892b0] mb-4 leading-relaxed">
+                      {step.description}
+                    </p>
+                    <p className="text-sm text-[#8892b0]">
+                      <strong>Deliverables:</strong> {step.deliverables}
+                    </p>
+                  </div>
                 </div>
-                <div
-                  className="flex-1 border-l-2 border-[#112240] pl-4 sm:pl-8 pb-8 transition-colors duration-300 group-hover:border-[#22d3ee]"
-                >
-                  <h2 className="text-[1.5rem] sm:text-[1.75rem] font-bold leading-tight text-[#ccd6f6] mb-4">
-                    {step.title}
-                  </h2>
-                  <p className="text-[#8892b0] mb-4 leading-relaxed">
-                    {step.description}
-                  </p>
-                  <p className="text-sm text-[#8892b0]">
-                    <strong>Deliverables:</strong> {step.deliverables}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 
